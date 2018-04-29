@@ -24,7 +24,7 @@ class Person extends React.Component{
       showModal:false
     })
 
-    axios.patch(`http://localhost:3004/taxis/${this.props.id}`, {
+    axios.patch(`/taxis/${this.props.id}`, {
       comment : this.state.inputValue
     })
     .then( response => {
