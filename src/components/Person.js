@@ -41,7 +41,7 @@ class Person extends React.Component{
 
   render(){
     return(
-      <Col className="gutter-row" style={{padding:"5px"}} span={6}>
+      <Col className="gutter-row" style={{padding:"5px"}} lg={6} sm={24}>
         <Card
           hoverable
           cover={<img alt="example" src={this.props.image} />}
