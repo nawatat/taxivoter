@@ -1,0 +1,89 @@
+{
+  "taxis": [
+    {
+      "id": 1,
+      "name": "Napat Suriyapun",
+      "licensePlate": "1กพ3429",
+      "rate": 0.5,
+      "area": "ประเวศ",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Chanathip Parisutthikul",
+      "licensePlate": "3ดก2239",
+      "rate": 5,
+      "area": "ประขาอุทิศ",
+      "image": "https://randomuser.me/api/portraits/men/2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Nawatat Noppawong Na Ayutthaya",
+      "licensePlate": "กพ9492",
+      "rate": 2.2,
+      "area": "สีลม",
+      "image": "https://randomuser.me/api/portraits/men/3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Nithit Vipachon",
+      "licensePlate": "2ก2211",
+      "rate": 0.5,
+      "area": "หาดใหญ่",
+      "image": "https://randomuser.me/api/portraits/men/4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Smith Johnson",
+      "licensePlate": "2456",
+      "rate": 2,
+      "area": "ลอนดอน",
+      "image": "https://randomuser.me/api/portraits/men/5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Saran Kothsatian",
+      "licensePlate": "นฏ0112",
+      "rate": 0.5,
+      "area": "พุทธมณฆล",
+      "image": "https://randomuser.me/api/portraits/men/7.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Upsorn Suriyapun",
+      "licensePlate": "กว5555",
+      "rate": 4.5,
+      "area": "สามพราน",
+      "image": "https://randomuser.me/api/portraits/men/25.jpg",
+      "comment": "test"
+    },
+    {
+      "id": 8,
+      "name": "Somkid Vipachon",
+      "licensePlate": "1ก9948",
+      "rate": 5,
+      "area": "ประชานุกูล",
+      "image": "https://randomuser.me/api/portraits/men/29.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Bruce Banner",
+      "licensePlate": "ทฆ4444",
+      "rate": 4,
+      "area": "พระประแดง",
+      "image": "https://randomuser.me/api/portraits/men/10.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Smirnoff Hoegarden",
+      "licensePlate": "กพ4445",
+      "rate": 4,
+      "area": "พระประแดง",
+      "image": "https://randomuser.me/api/portraits/men/9.jpg"
+    },
+    {
+      "comment": "olo",
+      "id": 11
+    }
+  ]
+}
