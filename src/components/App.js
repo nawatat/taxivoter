@@ -1,21 +1,39 @@
-import React, { Component } from 'react';
-import Header from './Header'
+import React, { Component } from 'react'
+import AppHeader from './AppHeader'
 import Category from './Category'
-import Data from '../data'
-import '../assets/style.css'
+// import Data from '../data'
+import { Layout } from 'antd'
+import 'antd/dist/antd.css'
+import axios from 'axios'
+const { Footer, Content } = Layout
+
 
 class App extends Component {
-  state = {good: "ควย", goodList: [{name: 1, rate:2},{name: 3, rate:4}]}
-  
+  state = { goodList: [], badList: [] }
+  componentDidMount(){
+    axios.get('http://localhost:3004/taxis')
+      .then( value  => {
+        console.log( value )
+        this.setState(() => ({
+          goodList: value.data.filter( item => item.rate >= 2.5  ),
+          badList: value.data.filter( item => item.rate < 2.5  )
+        }))
+    }) 
+  }
   render() {
-    const goodList = Data.filter( item => item.rate >= 2.5  )
-    const badList = Data.filter( item => item.rate < 2.5  )
+    console.log( this.state  )
     return (
-    <div>
-      <Header />
-      <Category category="Good" nameList="Good1" personList={goodList} />
-      <Category category="Bad" nameList="Bad1" personList={badList} />
-    </div>
+      <div>
+      
+        <Layout>
+          <AppHeader />
+          <Content>
+            <Category category="Good" nameList="Good1" personList={this.state.goodList} />
+            <Category category="Bad" nameList="Bad1" personList={this.state.badList} />
+          </Content>
+          <Footer>Footer</Footer>
+        </Layout>
+      </div>
     );
   }
 }
