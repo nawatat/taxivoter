@@ -11,7 +11,7 @@ const { Footer, Content } = Layout
 class App extends Component {
   state = { goodList: [], badList: [] }
   componentDidMount(){
-    axios.get('http://localhost:3004/taxis')
+    axios.get('/taxis')
       .then( value  => {
         console.log( value )
         this.setState(() => ({
