@@ -21,7 +21,7 @@ class Category extends React.Component{
         <StyledCategoryTitle category = {this.props.category} >
           <h1 className="content-header"> {this.props.category} </h1>
         </StyledCategoryTitle>
-        <Row gutter={32}>        
+        <Row gutter={16}>        
           {
               this.props.personList.map( value => (<Person 
                   name={value.name} 
