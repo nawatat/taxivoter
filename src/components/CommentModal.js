@@ -1,24 +1,26 @@
 import React from 'react'
-import { Input, Modal } from 'antd'
+import { Input, Modal, List } from 'antd'
 
-class CommentModal extends React.Component{
+const CommentModal = props => (
+  <div>
+    <Modal
+      title="Comment"
+      visible={props.visible}
+      onOk={() => props.handleOk()}
+      onCancel={() => props.handleCancel()}
+      okText="Comment"
+    >
 
-  render(){
-    return(
-      <div>
-        <Modal
-          title="Comment"
-          visible={ this.props.visible }
-          onOk={() => this.props.handleOk()}
-          onCancel={() => this.props.handleCancel()}
-          okText="Comment"
-        >
-          <Input placeholder="Comment" onChange={ (e) =>this.props.inputChange(e.target.value)} />
-     
-        </Modal>
-      </div> 
-    )
-  }
-}
+      <List
+        size="large"
+        bordered
+        dataSource={props.comment}
+        renderItem={item => (<List.Item>{item}</List.Item>)}
+      />
+      <Input placeholder="Comment" value={props.inputValue} onChange={e => props.inputChange(e.target.value)} />
+
+    </Modal>
+  </div>
+)
 
 export default CommentModal

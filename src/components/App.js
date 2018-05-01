@@ -7,21 +7,40 @@ import 'antd/dist/antd.css'
 import axios from 'axios'
 const { Footer, Content } = Layout
 
-
+// {
+        
+//   this.setState(() => ({
+//     goodList: res.data.filter( item => item.rate >= 2.5  ),
+//     badList: res.data.filter( item => item.rate < 2.5  )
+//   }))
+// }
 class App extends Component {
   state = { goodList: [], badList: [] }
   componentDidMount(){
     axios.get('/taxis')
-      .then( value  => {
-        console.log( value )
+      .then( res  => res.data) 
+      .then( res => {
+        let avgRate
+        let goodList = []
+        let badList = []
+        res.forEach( (person) => {
+          avgRate = person.rate.reduce( (sum,value) => sum+value, 0)/ person.rate.length
+          if (avgRate >= 2.5)
+          {
+            goodList.push(person)
+          }
+          else
+          {
+            badList.push(person)
+          }
+        })
         this.setState(() => ({
-          goodList: value.data.filter( item => item.rate >= 2.5  ),
-          badList: value.data.filter( item => item.rate < 2.5  )
+          goodList: goodList,
+          badList: badList
         }))
-    }) 
+      })
   }
   render() {
-    console.log( this.state  )
     return (
       <div>
       
